@@ -25,7 +25,7 @@
     BoldFont=*-bold,
     ItalicFont=*-italic,
     BoldItalicFont=*-bolditalic
-]{texgyretermes}  % Teksto  šrifatas bus Nimbus Roman No9 L, kuris yra
+]{texgyretermes}  % Teksto  šriftas bus Nimbus Roman No9 L, kuris yra
                   % atviras Times New Roman šrifto atitikmuo
 \RequirePackage{setspace} % Intervalas tarp eilučių
 \RequirePackage[
