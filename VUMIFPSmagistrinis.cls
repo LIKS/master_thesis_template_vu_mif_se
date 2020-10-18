@@ -62,6 +62,7 @@
 % Informacijos tituliniame puslapyje kintamieji
 \newcommand{\university}[1]{\def\@university{#1}}
 \newcommand{\faculty}[1]{\def\@faculty{#1}}
+\newcommand{\institute}[1]{\def\@institute{#1}}
 \newcommand{\papertype}[1]{\def\@papertype{#1}}
 \newcommand{\department}[1]{\def\@department{#1}}
 \newcommand{\supervisor}[1]{\def\@supervisor{#1}}
@@ -115,7 +116,10 @@
    ~
   \begin{center}
       {\setstretch{1.3}\large \MakeUppercase{\@university} \\
-          \MakeUppercase{\@faculty} \\
+         \MakeUppercase{\@faculty} \\
+         \ifdefined\@institute 
+             \MakeUppercase{\@institute} \\
+         \fi
          \MakeUppercase{\@department}\par }
 
      \null\vfil
@@ -169,6 +173,7 @@
   \global\let\@title\@empty
   \global\let\@university\@empty
   \global\let\@faculty\@empty
+  \global\let\@institute\@empty
   \global\let\@department\@empty
   \global\let\@papertype\@empty
   \global\let\@supervisor\@empty
