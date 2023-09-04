@@ -1,0 +1,204 @@
+\documentclass[
+    % english, % thesis will be in english
+    % signatureplaces % adds signature places in the title page
+]{VUMIFSEMasterThesis}
+\usepackage{float}
+\usepackage{wrapfig2}
+\usepackage{hyperref}
+\usepackage{algorithmicx}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{bm}
+\usepackage{caption}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{subcaption}
+\usepackage{biblatex}
+
+% Title page
+\university{Vilniaus universitetas}
+\faculty{Matematikos ir informatikos fakultetas}
+\department{Programų sistemų studijų programa}
+\papertype{Magistro baigiamojo darbo projektas / Magistro baigiamasis darbas} % Leave one
+\title{Programų sistemų kūrimo metodų tyrimas}
+\titleineng{Investigation of Methods of Software Development}
+\author{Vardenis Pavardenis}
+% \secondauthor{Vardonis Pavardonis}   % Add second author
+\supervisor{prof. habil. dr. Vardaitis Pavardaitis}
+\reviewer{doc. dr. Vardauskas Pavardauskas}
+\date{Vilnius – \the\year}
+
+\bibliography{bibliography}
+
+\begin{document}
+\maketitle
+
+%% Acknoledgements of individuals and/or institutions.
+% \sectionnonumnocontent{}
+% \vspace{7cm}
+% \begin{center}
+%     Padėkos asmenims ir/ar organizacijoms
+% \end{center}
+
+\begin{lithuanian}
+\sectionnonumnocontent{Santrauka}
+Santraukose lietuvių ir anglų kalbomis glaustai aprašomas darbo turinys:
+pristatoma nagrinėta problema ir padarytos išvados. Santraukų gale nurodomi
+darbo raktiniai žodžiai. Santraukos lietuvių ir anglų kalbomis rašomos
+atskiruose puslapiuose. Kiekvienos jų apimtis -- ne daugiau kaip 0,5 puslapio.
+Automatiškai naudojamos lietuviškos kabutės: \enquote{tekstas}.
+
+% Specify up to 5 most important topic keywords.
+% A keyword can have multiple words.
+\raktiniaizodziai{raktinis žodis 1, raktinis žodis 2, raktinis žodis 3, raktinis žodis 4, raktinis žodis 5}
+\end{lithuanian}
+
+\begin{english}
+\sectionnonumnocontent{Summary}
+English summary. English quotes are used automatically: \enquote{tekstas}.
+
+\keywords{keyword 1, keyword 2, keyword 3, keyword 4, keyword 5}
+\end{english}
+
+\tableofcontents
+
+\sectionnonum{Įvadas}
+Įvade aprašomi darbo tikslai ir uždaviniai, nurodomas temos aktualumas, aptariamos
+teorinės darbo prielaidos bei metodika, apibrėžiamas tiriamasis objektas, apibūdinami
+su tema susiję literatūros ar kitokie šaltiniai, temos analizės tvarka, darbo atlikimo
+aplinkybės, pateikiama žinių apie naudojamus instrumentus (programas ir kt.). Darbo
+įvadas neturi būti dėstymo santrauka. Įvado apimtis 3--4 puslapiai.
+
+\section{Medžiagos darbo tema dėstymo skyriai}
+Medžiagos darbo tema dėstymo skyriuose išsamiai pateikiamos nagrinėjamos temos detalės:
+pradiniai duomenys, jų analizės ir apdorojimo metodai, sprendimų įgyvendinimas, gautų
+rezultatų apibendrinimas. Šios dalies turinys labai priklauso nuo darbo temos. Tačiau
+visais atvejais joje turi būti tokio pobūdžio skyriai:
+\begin{enumerate}
+\item literatūros ar kitokių šaltinių apžvalga. Čia reikėtų daugiau dėmesio skirti
+nuodugnesnėms tam tikros srities studijoms, akademiniams straipsniams, įvairių autorių
+nuomonių palyginimui;
+\item analitinė dalis. Šiame skyriuje, nagrinėjant pasirinktą temą ir sprendžiant iškeltas
+problemas, parenkami tyrimo metodai, kurie atitiktų ne tik temos pobūdį, bet ir
+objektyvias tyrėjų galimybes. Autorius turi atlikti pakankamai išsamią ir temos turinį
+atskleidžiančią savarankišką analizę;
+\item objekto projektavimas. Šiame skyriuje, integruojant teorines bei praktines žinias,
+aptariamos ir vertinamos galimos sprendimų alternatyvos, atskleidžiamas autoriaus 
+siūlomas problemos sprendimo kelias, pateikiamas veiksmų planas ar bendrosios jų
+atlikimo gairės;
+\item objekto realizacija. Aprašoma objekto prototipo realizacija, jo savybės, pritaikymo
+praktikoje galimybės.
+\item verifikavimas ir vertinimas. Šiame skyriuje pateikiami argumentai parodantys
+pasiūlyto sprendimo korektiškumą ir efektyvumą.
+\end{enumerate}
+Skyriai gali turėti poskyrius ir smulkesnes sudėtines dalis, kaip punktus ir papunkčius.
+
+Medžiaga turi būti dėstoma aiškiai, pateikiant argumentus. Tekste dėstomas
+trečiuoju asmeniu, t.y. rašoma ne \enquote{aš manau}, bet „autorius mano“, „autoriaus
+nuomone“. Reikėtų vengti informacijos nesuteikiančių frazių, pvz., „...kaip jau
+buvo minėta...“, \enquote{...kaip visiems žinoma...} ir pan., vengti grožinės
+literatūros ar publicistinio stiliaus, gausių metaforų ar panašių meninės
+išraiškos priemonių.
+
+Skyriai gali turėti poskyrius ir smulkesnes sudėtines dalis, kaip punktus ir
+papunkčius.
+
+\subsection{Poskyris}
+Citavimo pavyzdžiai: cituojamas vienas šaltinis \cite{PvzStraipsnLt}; cituojami
+keli šaltiniai \cite{PvzStraipsnEn, ArticleByOrg, PvzKonfLt, PvzKonfEn, PvzKnygLt, PvzKnygEn,
+PvzElPubLt, PvzElPubEn, PvzBakLt, PvzMagistrLt, PvzPhdEn}.
+
+Anglų kalbos terminų pateikimo pavyzdžiai: priklausomybių injekcija (\anglnb{dependency injection},
+dažnai trumpinama kaip \textit{DI}), saitų redaktorius \angl{linker}.
+
+Išnašų\footnote{Pirma išnaša.} pavyzdžiai\footnote{Antra išnaša.}.
+
+\subsection{Faktorialo algoritmas}
+
+\ref{alg:factorial} algoritmas parodo, kaip suskaičiuoti skaičiaus faktorialą.
+
+\begin{algorithm}
+\caption{Skaičiaus faktorialas}
+\begin{algorithmic}[1] % [1] adds line numbers
+\State $N\gets$ skaičius, kurio faktorialą skaičiuojame
+\State $F\gets 1$
+\For{$i := 2$ to $N$}
+    \State $F\gets F \cdot i$
+\EndFor
+\end{algorithmic}
+\label{alg:factorial}
+\end{algorithm}
+
+\subsubsection{Punktas}
+\subsubsubsection{Papunktis}
+\subsubsection{Punktas}
+\section{Skyrius}
+\subsection{Poskyris}
+\subsection{Poskyris}
+
+\sectionnonum{Rezultatai}
+Rezultatų skyriuje išdėstomi pagrindiniai darbo rezultatai: kažkas išanalizuota,
+kažkas sukurta, kažkas įdiegta. Tarpinių žingsnių išdavos skirtos užtikrinti galutinio
+rezultato kokybę neturi būti pateikiami šiame skyriuje. Kalbant informatikos termi-
+nais, šiame skyriuje pateikiama darbo išvestis, kuri gali būti įvestimi kituose panašios
+tematikos darbuose. Rezultatai pateikiami sunumeruotų (gali būti hierarchiniai) sąrašų
+pavidalu. Darbo rezultatai turi atitikti darbo tikslą.
+
+\sectionnonum{Išvados}
+\begin{enumerate}[labelindent=0pt]
+    \item Išvadų skyriuje daromi nagrinėtų problemų sprendimo metodų palyginimai, siūlomos
+rekomendacijos, akcentuojamos naujovės.
+    \item Išvados pateikiamos sunumeruoto (gali būti hierarchinis) sąrašo pavidalu.
+    \item Darbo išvados turi atitikti darbo tikslą.
+\end{enumerate}
+
+\printbibliography[heading=bibintoc]  % Šaltinių sąraše nurodoma panaudota
+% literatūra, kitokie šaltiniai. Abėcėlės tvarka išdėstomi darbe panaudotų
+% (cituotų, perfrazuotų ar bent paminėtų) mokslo leidinių, kitokių publikacijų
+% bibliografiniai aprašai. Šaltinių sąrašas spausdinamas iš naujo puslapio.
+% Aprašai pateikiami netransliteruoti. Šaltinių sąraše negali būti tokių
+% šaltinių, kurie nebuvo paminėti tekste (LaTeX tai sutvarko automatiškai).
+% Šaltinių sąraše rekomenduojame necituoti savo kursinio darbo, nes tai nėra
+% oficialus literatūros šaltinis. Jei tokių nuorodų reikia, pateikti jas tekste.
+
+% \sectionnonum{Sąvokų apibrėžimai}
+\sectionnonum{Santrumpos}
+Sąvokų apibrėžimai ir santrumpų sąrašas sudaromas tada, kai darbo tekste
+vartojami specialūs paaiškinimo reikalaujantys terminai ir rečiau sutinkamos
+santrumpos.
+
+% Appendices
+% Prieduose gali būti pateikiama pagalbinė, ypač darbo autoriaus savarankiškai
+% parengta, medžiaga. Savarankiški priedai gali būti pateikiami ir
+% kompaktiniame diske. Priedai taip pat numeruojami ir vadinami. Darbo tekstas
+% su priedais susiejamas nuorodomis.
+\appendix{Neuroninio tinklo struktūra}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{img/MLP}
+    \caption{Paveikslėlio pavyzdys}
+    \label{img:mlp}
+\end{figure}
+
+
+\appendix{Eksperimentinio palyginimo rezultatai}
+
+% tablesgenerator.com - converts calculators (e.g. excel) tables to LaTeX
+\begin{table}[H]\footnotesize
+  \centering
+  \caption{Lentelės pavyzdys}
+  {\begin{tabular}{|l|c|c|} \hline
+    Algoritmas & $\bar{x}$ & $\sigma^{2}$ \\
+    \hline
+    Algoritmas A  & 1.6335    & 0.5584       \\
+    Algoritmas B  & 1.7395    & 0.5647       \\
+    \hline
+  \end{tabular}}
+  \label{tab:table example}
+\end{table}
+
+\end{document}
