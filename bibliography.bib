@@ -1,0 +1,132 @@
+% More about entry types and their attributes:
+% http://mirror.datacenter.by/pub/mirrors/CTAN/macros/latex/contrib/biblatex/doc/biblatex.pdf#subsection.2.1
+
+% Note: we can use either '-' or '--' as page range separators, they both
+% will be turned into the same symbol (en-dash)
+
+% Authors' names are automatically turned into initials, surnames
+% are left as-is. So names can be specified in many ways:
+% Name Surname or Surname, Name or N. Surname
+@article{PvzStraipsnLt,
+    author = {Antanas Pavardenis and Pavardonis, Benas and C. Pavardauskas},
+    title = {Straipsnio pavadinimas},
+    journal = {Žurnalo pavadinimas},
+    year = {2001},
+    volume = {IV},
+    pages = {8-17},
+    langid = {lithuanian},
+}
+
+@article{PvzStraipsnEn,
+    author = {A. Surname and B. Tsurname and Usurname, Cynthia},
+    title = {Article Title},
+    journal = {Journal Title},
+    year = {2001},
+    volume = {IV},
+    pages = {3-15},
+    langid = {english},
+}
+
+% If we want to preserve full name of the author, we can enclose author's name in {}.
+% Same technique also works for other fields: everything in {} is printed exactly
+% as written.
+@article{ArticleByOrg,
+    author = {{Organization's name}},
+    title = {Why is {LaTeX} name written this way?},
+    journal = {Some journal},
+    year = {2000},
+    volume = {I},
+    pages = {1--20},
+    langid = {lithuanian},
+}
+
+@inproceedings{PvzKonfLt,
+    author = {A. Pavardenis and B. Pavardonis and C. Pavardauskas and D.
+              Pavardinskas},
+    title = {Straipsnio pavadinimas},
+    booktitle = {Rinkinio pavadinimas},
+    year = {2002},
+    publisher = {Leidykla},
+    address = {Miestas, šalis},
+    pages = {3-15},
+    langid = {lithuanian},
+}
+
+@inproceedings{PvzKonfEn,
+    author = {A. Surname and B. Tsurname and C. Usurname and D. Vsurname},
+    title = {Article title},
+    booktitle = {Conference book title},
+    year = {2002},
+    publisher = {Publisher},
+    address = {City, country},
+    pages = {3-15},
+    langid = {english},
+}
+
+% 172 p. means total pages in the book
+@book{PvzKnygLt,
+    author = {A. Pavardenis and B. Pavardonis and C. Pavardauskas},
+    title = {Knygos pavadinimas},
+    publisher = {Leidykla},
+    year = {2003},
+    address = {Miestas, šalis},
+    note = {172 p.},
+    langid = {lithuanian},
+}
+
+@book{PvzKnygEn,
+    author = {A. Surname and B. Tsurname and C. Usurname},
+    title = {Book title},
+    publisher = {Publisher},
+    year = {2003},
+    address = {City, country},
+    note = {172 p.},
+    langid = {english},
+}
+
+% urldate field specifies, when the source was last accessed
+@online{PvzElPubLt,
+    author = {A. Pavardenis and B. Pavardonis and C. Šavardauskas},
+    title = {Elektroninės publikacijos pavadinimas},
+    url = {https://example.com/kelias/iki/straipsnio},
+    year = {2004},
+    urldate = {2015-02-01},
+    langid = {lithuanian},
+}
+
+@online{PvzElPubEn,
+    author = {A. Surname and B. Tsurname and C. Usurname},
+    title = {Online Source Title},
+    url = {https://example.com/path/to/the/article},
+    year = {2004},
+    urldate = {2015-02-01},
+    langid = {english},
+}
+
+% Citing bachelor's thesis. We use thesis entry type and specify type={bathesis}
+@thesis{PvzBakLt,
+    author = {A. Pavardonis},
+    title = {Bakalauro darbo pavadinimas},
+    school = {Universiteto pavadinimas},
+    type = {bathesis},
+    address = {Vilnius},
+    year = {2005},
+    langid = {lithuanian},
+}
+
+@mastersthesis{PvzMagistrLt,
+    author = {A. Pavardonis},
+    title = {Magistrinio darbo pavadinimas},
+    school = {Universiteto pavadinimas},
+    year = {2005},
+    langid = {lithuanian},
+}
+
+@phdthesis{PvzPhdEn,
+    author = {A. Surname},
+    title = {Title of PhD thesis},
+    school = {Title of university},
+    address = {London},
+    year = {2005},
+    langid = {english},
+}
