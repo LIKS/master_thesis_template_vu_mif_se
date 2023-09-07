@@ -44,7 +44,7 @@ Run one of:
 
 Run `latexmk -lualatex master_thesis.tex`.
 
-## Othe useful commands
+## Other useful commands
 
 ### Linux / macOS
 
