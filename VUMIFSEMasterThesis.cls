@@ -440,10 +440,13 @@
 
 % Nuorodos turinyje ir kitur padaromos aktyviomis
 \RequirePackage[%
-    hidelinks,
+    % hidelinks,
+    colorlinks,
+    citecolor=blue,
     linktoc=all,
     pdflang={\@ifundefined{@ThesisEng}{lt}{en-US}},
     bookmarksnumbered=true,
+    pdfdisplaydoctitle=true
 ]{hyperref}
 
 % Pataisymas, kad veiktų kompiliavimas su LuaLaTeX.
